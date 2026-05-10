@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RomaTalas - Contemporary Antiquity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#ffc8c2",
+                        "on-background": "#1b1d0e",
+                        "on-secondary-fixed": "#001b3c",
+                        "outline-variant": "#e2beba",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#303221",
+                        "secondary-fixed-dim": "#a7c8ff",
+                        "on-secondary-fixed-variant": "#1f477b",
+                        "surface-bright": "#fbfbe2",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "inverse-primary": "#ffb4ac",
+                        "on-tertiary-fixed-variant": "#394857",
+                        "surface-container": "#efefd7",
+                        "tertiary-fixed": "#d4e4f6",
+                        "secondary-fixed": "#d5e3ff",
+                        "surface-container-highest": "#e4e4cc",
+                        "surface-container-high": "#eaead1",
+                        "secondary": "#3a5f94",
+                        "on-primary-fixed-variant": "#92030f",
+                        "on-primary-fixed": "#410003",
+                        "tertiary": "#374655",
+                        "tertiary-fixed-dim": "#b8c8da",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#9fc2fe",
+                        "surface-dim": "#dbdcc3",
+                        "background": "#fbfbe2",
+                        "on-tertiary-container": "#c6d7e9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#5a403e",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#b52424",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#294f83",
+                        "inverse-on-surface": "#f2f2d9",
+                        "error": "#ba1a1a",
+                        "outline": "#8e706d",
+                        "surface-container-low": "#f5f5dc",
+                        "surface-variant": "#e4e4cc",
+                        "on-surface": "#1b1d0e",
+                        "on-error-container": "#93000a",
+                        "primary": "#8f000d",
+                        "surface": "#fbfbe2",
+                        "primary-fixed": "#ffdad6",
+                        "primary-container": "#b22222",
+                        "tertiary-container": "#4e5e6d",
+                        "on-tertiary-fixed": "#0d1d2a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .texture-overlay {
+            background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" fill="white" filter="url(%23noiseFilter)" opacity="0.05"/%3E%3C/svg%3E');
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+        .dry-stone-shadow {
+            box-shadow: 0px 4px 12px rgba(112, 128, 144, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen relative font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<div class="fixed inset-0 texture-overlay z-0"></div>
+<!-- TopNavBar Component -->
+<nav class="bg-background dark:bg-surface-dim w-full top-0 border-b border-outline/20 relative z-50">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-screen-xl mx-auto">
+<div class="font-display-lg text-headline-md text-primary dark:text-inverse-primary tracking-tighter">RomaTalas</div>
+<div class="flex gap-sm">
+<button class="text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-colors p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<button class="text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-colors p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_balance</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="relative z-10 w-full max-w-screen-xl mx-auto px-margin-mobile md:px-margin-desktop pb-xl min-h-[calc(100vh-160px)] flex items-center">
+<!-- Hero Section: Fact of the Day -->
+<section class="mt-xl mb-xl w-full">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 flex flex-col gap-md z-10 pr-lg">
+<div class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-3 py-1 rounded-full w-max">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Fact of the Day</span>
+</div>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary leading-tight">The Aqueducts of Soli</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Roman engineers in Cilicia constructed vast aqueduct systems, not just for drinking water, but to supply monumental public baths. In daily Talas life, the thermae were the social heart of the community, where citizens gathered not merely to bathe, but to conduct business, exercise, and participate in civic life.
+                    </p>
+<div class="mt-sm">
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-DEFAULT hover:bg-primary-container transition-colors inline-flex items-center gap-2">
+                            Explore Engineering
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-7 relative h-[500px] md:h-[600px] w-full rounded-lg overflow-hidden border border-outline/20 dry-stone-shadow">
+<img alt="Roman Aqueduct Ruins" class="w-full h-full object-cover object-center absolute inset-0" src="screen.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-md left-md right-md bg-surface-container-lowest/90 backdrop-blur-sm p-4 rounded border border-outline/10">
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1">Artifact Context</p>
+<p class="font-body-md text-body-md text-on-surface">Remnants of the elevated water channels supplying Pompeiopolis.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface w-full py-lg border-t border-outline/10 relative z-10 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-screen-xl mx-auto gap-md">
+<div class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface text-center md:text-left">
+                RomaTalas
+            </div>
+<div class="flex flex-wrap justify-center gap-md font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container">
+<a class="hover:underline decoration-primary transition-opacity duration-200" href="#">Archives</a>
+<a class="hover:underline decoration-primary transition-opacity duration-200" href="#">Cartography</a>
+<a class="hover:underline decoration-primary transition-opacity duration-200" href="#">Privacy</a>
+<a class="hover:underline decoration-primary transition-opacity duration-200" href="#">Contact</a>
+</div>
+<div class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim text-center md:text-right">
+                © MMXXIV Legio Talas. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
